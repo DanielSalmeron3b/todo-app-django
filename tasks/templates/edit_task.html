@@ -1,0 +1,46 @@
+{% load  static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Edit Task 🤠</title>
+</head>
+<body>
+
+    <div class="container">
+        <form  enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+        
+            {% for form in forms %}
+            <div class="mb-3">
+        
+                <label for="" class="form-label">{{ form.label }}</label>
+        
+                <input 
+                type="{{ form.field.widget.input_type }}"
+                class="form-control" 
+                name="{{ form.name }}" 
+                id="" 
+                aria-describedby="helpId" 
+                placeholder="{{ form.label }}" 
+                value="{{ form.value | default:'' }}"
+                />
+        
+            </div>
+            <div class="col-12 help-text">{{form.errors}}</div>
+            {% endfor %}
+        
+            <input name="" id="" class="btn btn-success" type="submit" value="Submit">
+            <a name="" id="" class="btn btn-primary" href="{% url 'tasks' %}" role="button">Cancel</a>
+        
+        </form>
+    </div>
+
+</body>
+</html>
