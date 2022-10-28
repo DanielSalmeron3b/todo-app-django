@@ -1,4 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family:'Segoe UI';
+}
+
 body{
-    background: #202020;
     color: #fff;
+    background: rgb(22,44,54);
+    background:
+    linear-gradient(45deg, #20745f 0%, rgba(32, 116, 95, 0) 70%), 
+    linear-gradient(135deg, #81b0df 10%, rgba(129, 176, 223, 0) 80%), 
+    linear-gradient(225deg, #3271bd 10%, rgba(50, 113, 189, 0) 80%), 
+    linear-gradient(315deg, #375268 100%, rgba(55, 82, 104, 0) 70%) 
+    center/cover no-repeat;
+    background-attachment: fixed;
+}
+.main-title{
+    font-size: 3.2em;
+    width: 100%;
+    background-color: #375268;
+    text-align: center;
+}
+.main-form{
+    text-align: center;
+    margin-top: 20px;
+}
+.main-form form{
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto 0;
+    text-align: center;
+    width: 20%;
+    justify-content: space-evenly;
+    height: 150px;
+}
+
+.main-form form input{
+    padding: 6px;
+    font-family: 'Segoe UI';
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 4px;
+}
+
+.main-form form textarea{
+    padding: 6px;
+    font-family: 'Segoe UI';
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 4px;
+}
+
+.main-form form button{
+    padding: 6px;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 6px;
+    border: 1px #375268 solid;
+    background-color: #29966c;
+}
+
+.task-card{
+    text-align: center;
+    background-color: rgba(220, 220, 220, 0.2);
+    border-radius: 4px;
+    box-shadow: 
+    0 6px 8px rgba(0, 0, 0, 0.1), 
+    0 0 5px rgba(0, 0, 0, 0.2), 
+    inset 0 0 2px rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
+    padding: 10px;
+    width: 20%;
+    margin: 30px auto 30px;
+}
+
+.task-card--buttons{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-card a{
+    padding: 6px;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    color: #fff;
+    border-radius: 6px;
+    border: 1px #375268 solid;
+    text-decoration: none;
+    background-color: #3271bd;
+    width: 80%;
+}
+
+.task-card .delete-form{
+    width: 100%;
+}
+
+.task-card button{
+    padding: 6px;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    background-color: #8C1105;
+    margin-top: 6px;
+    height: 100%;
+    width: 80%;
+}
+
+/* Edit task */
+.main-form .main-form-edit{
+    margin-top: 30vh;
+}
+.main-form .main-form-edit .main-form-edit--container{
+    display: flex;
+    flex-direction: column;
+}
+.main-form-input--edit{
+    height: 40px;
+}
+.main-form--edit_buttons{
+    margin-top: 40px;
+}
+.main-form--edit_buttons input{
+    cursor:pointer;
+    background-color: #29966c;
+    font-size: 1.2em;
+}
+.cancel-edit{
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 6px;
+    background-color: #8C1105;
+    height: 100%;
+    padding: 6px;
+    margin-top: 2px;
 }
